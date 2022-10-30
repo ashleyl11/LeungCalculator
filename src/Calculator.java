@@ -1,16 +1,16 @@
+import static java.lang.Double.parseDouble;
 import static java.lang.Integer.parseInt;
 
 public class Calculator {
     private double num1; // the two numbers that the code will operate on
     private double num2;
+    private String expression;
 
     // intializing the two numbers
-    public Calculator(double num1, double num2){
-       this.num1 = num1;
-       this.num2 = num2;
-    }
 
-    public Calculator(){
+    public Calculator(String operation){
+        num1 = parseDouble(expression.substring(0,expression.indexOf(operation)));
+        num2 = parseDouble(expression.substring(expression.indexOf(operation)+1));
     }
 
     // multiplication method
@@ -43,11 +43,4 @@ public class Calculator {
         return Math.pow(num1,num2);
     }
 
-    // num extractor
-    public double extractOne(String expression, String operation){
-        return parseInt(expression.substring(0,expression.indexOf(operation)));
-    }
-    public double extractTwo(String expression, String operation){
-        return parseInt(expression.substring(expression.indexOf(operation)+1));
-    }
 }

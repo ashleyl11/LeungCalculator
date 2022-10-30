@@ -13,18 +13,29 @@ public class CalculatorRunner {
         double num2;
         double result;
 
+
         if (expression.indexOf("*") != -1){
-            num1 = parseInt(operat)
+            Calculator calc1 = new Calculator("*");
+            result = calc1.multiply();
         } else if (expression.indexOf("/") != -1){
-
+            Calculator calc1 = new Calculator("/");
+            result = calc1.divide();
         } else if (expression.indexOf("+") != -1){
-
+            Calculator calc1 = new Calculator("+");
+            result = calc1.addition();
         } else if (expression.indexOf("-") != -1){
-
+            Calculator calc1 = new Calculator("-");
+            result = calc1.subtraction();
         } else if (expression.indexOf("%") != -1){
-
+            Calculator calc1 = new Calculator("%");
+            result = calc1.mod();
         } else {
-
+            Calculator calc1 = new Calculator("^");
+            result = calc1.exponent();
         }
+
+        System.out.println(result);
+
+
     }
 }
