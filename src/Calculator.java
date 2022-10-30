@@ -4,11 +4,10 @@ import static java.lang.Integer.parseInt;
 public class Calculator {
     private double num1; // the two numbers that the code will operate on
     private double num2;
-    private String expression;
 
     // intializing the two numbers
 
-    public Calculator(String operation){
+    public Calculator(String expression,String operation){
         num1 = parseDouble(expression.substring(0,expression.indexOf(operation)));
         num2 = parseDouble(expression.substring(expression.indexOf(operation)+1));
     }
